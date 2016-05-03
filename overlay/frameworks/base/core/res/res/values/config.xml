@@ -78,7 +78,8 @@
     <integer name="config_lowBatteryWarningLevel">10</integer>
     
     <!-- Close low battery warning when battery level reaches this value -->
-    <integer name="config_lowBatteryCloseWarningLevel">15</integer>
+    <add-resource type="integer" name="config_lowBatteryCloseWarningLevel">15</add-resource>
+    <!--<integer name="config_lowBatteryCloseWarningLevel">15</integer>-->
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
@@ -207,7 +208,8 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">19</integer>
+    <add-resource type="integer" name="config_deviceHardwareKeys">19</add-resource>
+    <!--<integer name="config_deviceHardwareKeys">19</integer>-->
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">7</integer>
@@ -222,16 +224,20 @@
     <bool name="config_hotswapCapable">true</bool>
 
     <!-- Button illumination -->
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <add-resource type="bool" name="config_deviceHasVariableButtonBrightness">true</add-resource>
+    <!--<bool name="config_deviceHasVariableButtonBrightness">true</bool>-->
 
     <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
+    <add-resource type="bool" name="config_enableTorch">true</add-resource>
+    <!--<bool name="config_enableTorch">true</bool>-->
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 
     <!-- Performance profiles -->
-    <string name="config_perf_profile_prop">sys.perf.profile</string>
-    <string name="config_perf_profile_default_entry">1</string>
+    <add-resource type="string" name="config_perf_profile_prop">sys.perf.profile</add-resource>
+    <add-resource type="string" name="config_perf_profile_default_entry">1</add-resource>
+    <!--<string name="config_perf_profile_prop">sys.perf.profile</string>
+    <string name="config_perf_profile_default_entry">1</string>-->
 
 </resources>
