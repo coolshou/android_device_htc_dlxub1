@@ -17,7 +17,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# common msm8960 configs
+# Inherit from msm8960-common
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 
 # Inherit from dlxub1 device
@@ -142,6 +142,9 @@ PRODUCT_CHARACTERISTICS := default
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_USER=buildteam
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_HOST=ABM105
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
