@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_dlxub1.mk
+    $(LOCAL_DIR)/aosp_dlxub1.mk
