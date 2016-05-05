@@ -1,1 +1,1 @@
-add_lunch_combo cm_dlxub1-eng
+add_lunch_combo aosp_dlxub1-eng
