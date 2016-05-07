@@ -25,7 +25,7 @@
 # against the traditional rules of inheritance).
 
 # inherit from common msm8960
--include device/htc/msm8960-common/BoardConfigCommon.mk
+-include device/htc/dlxub1/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/htc/dlxub1/include
 
@@ -48,8 +48,17 @@ BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxub1 user_debug=0
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
-TARGET_KERNEL_CONFIG := cyanogenmod_dlxub1_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/m7
+TARGET_KERNEL_CONFIG := deluxe_ub1_defconfig
+TARGET_KERNEL_SOURCE := device/htc/dlxub1-kernel
+
+-include $TARGET_KERNEL_SOURCE/AndroidKernel.mk
+#out/target/product/dlxub1/kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/device/htc/dlxub1/prebuild/zImage:$(TARGET_OUT)/kernel
+#following will be done by "lunch aosp_dlxub1-eng"
+TARGET_PREBUILT_KERNEL = device/htc/dlxub1/prebuild/zImage
+$(shell test  ! -f out/target/product/dlxub1/ && mkdir -p  out/target/product/dlxub1/ )
+$(shell cp $(TARGET_PREBUILT_KERNEL) out/target/product/dlxub1/kernel)
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true

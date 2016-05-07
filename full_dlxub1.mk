@@ -149,7 +149,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_HOST=ABM105
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi xxhdpi
-PRODUCT_LOCALES += en_US
+#PRODUCT_LOCALES += en_US
+PRODUCT_LOCALES += zh_TW
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
