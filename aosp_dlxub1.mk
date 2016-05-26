@@ -13,7 +13,7 @@ PRODUCT_NAME := aosp_dlxub1
 #with following line, the system.img & userdata.img will be in full size like AOSP x86 image
 # system.img size = BOARD_SYSTEMIMAGE_PARTITION_SIZE
 # userdata.img size = BOARD_USERDATAIMAGE_PARTITION_SIZE
-TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 #avoid hardware/qcom/display/msm8960/liblight and device/htc/msm8960-common/liblights conflect
 TARGER_CM_BASE := false
@@ -25,11 +25,20 @@ $(call inherit-product, device/htc/dlxub1/full_dlxub1.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dlxub1
+#PRODUCT_NAME := htc_asia_tw
+#must same as vendorsetup.sh
 PRODUCT_NAME := aosp_dlxub1
-PRODUCT_BRAND := HTC
+PRODUCT_BRAND := htc
 PRODUCT_MODEL := HTC Butterfly
 PRODUCT_MANUFACTURER := HTC
+PRODUCT_BOARD := MSM8960
+PRODUCT_DEFAULT_LANGUAGE :=zh
+PRODUCT_DEFAULT_REGION := TW
 
+
+export BUILD_USER=buildteam
+export BUILD_HOST=ABM105
+ 
 # Set build fingerprint / ID / Product Name etc.
 #PRODUCT_BUILD_PROP_OVERRIDES += \
 #	BUILD_ID=LMY49I \
